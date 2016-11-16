@@ -1,0 +1,15 @@
+﻿
+This is how to use the task.
+
+
+<!-- Change this path to point to installed dll -->	
+<UsingTask AssemblyFile="$(MSBuildProjectDirectory)MyTasks.dll" TaskName="MyTask"/>
+
+<Target Name="Example">
+
+	<!-- Change parameters to reflect your project -->	
+	<MyTask 
+		Files="@(ProcessFiles)" 
+		Folder="$(OutputFolder)" 
+		/>
+</Target>
